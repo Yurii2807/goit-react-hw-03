@@ -1,0 +1,32 @@
+.form {
+  border: 1px solid black;
+  padding: 10px;
+  width: 250px;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ErrorMsg {
+  color: rgba(255, 0, 0, 0.441);
+}
+.btn {
+  border: 1px solid black;
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-right: 0;
+  width: auto;
+}
+.btn:hover,
+.btn:focus-visible,
+.btn:active {
+  background-color: #bebaba;
+}

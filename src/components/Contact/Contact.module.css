@@ -1,0 +1,33 @@
+.div{
+  position: relative;
+  width: 250px;
+  margin-bottom: 10px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.p {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 0;
+  align-items: center;
+}
+
+.btn {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  border: 1px solid rgb(170, 167, 167);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover,
+.btn:focus-visible,
+.btn:active {
+  background-color: #7f7d7d;
+}
+
+
