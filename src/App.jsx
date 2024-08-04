@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import ContactForm from "./components/ContactForm/ContactForm";
 import ContactList from "./components/ContactList/ContactList";
 import SearchBox from "./components/SearchBox/SearchBox";
-import { nanoid } from "nanoid";
 // import Contact from "./components/Contact/Contact";
 import dataContacts from "../contacts.json";
 import "./App.module.css";
@@ -19,11 +18,11 @@ function App() {
     contact.name.toLowerCase().includes(filterContacts.toLowerCase().trim())
   );
 
-  const addContact = (newContact) => {
-    setContacts((prevContacts) => {
-      return [...prevContacts, newContact];
-    });
-  };
+  // const addContact = (newContact) => {
+  //   setContacts((prevContacts) => {
+  //     return [...prevContacts, newContact];
+  //   });
+  // };
 
   const addNewContact = (newContact) => {
     setContacts((prevContacts) => {
