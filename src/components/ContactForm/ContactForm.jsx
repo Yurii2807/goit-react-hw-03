@@ -22,8 +22,17 @@ const ContactForm = ({ onAdd }) => {
   const nameFieldId = useId();
   const numberFieldId = useId();
 
+  // const handleSubmit = (values, actions) => {
+  //   onAdd({ id: nanoid(), ...values });
+  //   actions.resetForm();
+  // };
+
   const handleSubmit = (values, actions) => {
-    onAdd({ id: nanoid(), ...values });
+    addNewContact({
+      id: nanoid(),
+      name: values.name,
+      number: values.number,
+    });
     actions.resetForm();
   };
   return (
@@ -35,13 +44,13 @@ const ContactForm = ({ onAdd }) => {
       <Form className={css.form}>
         <div className={css.field}>
           <label htmlFor={nameFieldId}>Name</label>
-          <Field type="text" name="name" id={nameFieldId} />
+          <Field type="text" name="name" />
           <ErrorMessage className={css.ErrorMsg} name="name" component="span" />
         </div>
 
         <div className={css.field}>
           <label htmlFor={numberFieldId}>Number</label>
-          <Field type="text" name="number" id={numberFieldId} />
+          <Field type="text" name="number" />
           <ErrorMessage
             className={css.ErrorMsg}
             name="number"
@@ -57,3 +66,5 @@ const ContactForm = ({ onAdd }) => {
 };
 
 export default ContactForm;
+
+// id={numberFieldId}id={nameFieldId}
