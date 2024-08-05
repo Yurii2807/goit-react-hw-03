@@ -24,13 +24,22 @@ const ContactForm = ({ onAdd }) => {
   // const numberFieldId = useId();
 
   const handleSubmit = (values, actions) => {
-    addNewContact({
+    onAdd({
       id: nanoid(),
       name: values.name,
       number: values.number,
     });
     actions.resetForm();
   };
+
+  // const handleSubmit = (values, actions) => {
+  //   addNewContact({
+  //     id: nanoid(),
+  //     name: values.name,
+  //     number: values.number,
+  //   });
+  //   actions.resetForm();
+  // };
   // const handleSubmit = (values, actions) => {
   //   onAdd({ id: nanoid(), ...values });
   //   actions.resetForm();
