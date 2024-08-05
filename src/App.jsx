@@ -18,17 +18,17 @@ function App() {
     contact.name.toLowerCase().includes(filterContacts.toLowerCase().trim())
   );
 
-  // const addContact = (newContact) => {
-  //   setContacts((prevContacts) => {
-  //     return [...prevContacts, newContact];
-  //   });
-  // };
-
-  const addNewContact = (newContact) => {
+  const addContact = (newContact) => {
     setContacts((prevContacts) => {
-      return [newContact, ...prevContacts];
+      return [...prevContacts, newContact];
     });
   };
+
+  // const addNewContact = (newContact) => {
+  //   setContacts((prevContacts) => {
+  //     return [newContact, ...prevContacts];
+  //   });
+  // };
 
   const deleteContacts = (contactId) => {
     setContacts((prevContacts) => {

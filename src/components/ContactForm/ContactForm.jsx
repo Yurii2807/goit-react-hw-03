@@ -44,13 +44,13 @@ const ContactForm = ({ onAdd }) => {
     >
       <Form className={css.form}>
         <div className={css.field}>
-          <label htmlFor={nameFieldId}>Name</label>
+          <label>Name</label>
           <Field type="text" name="name" />
           <ErrorMessage className={css.ErrorMsg} name="name" component="span" />
         </div>
 
         <div className={css.field}>
-          <label htmlFor={numberFieldId}>Number</label>
+          <label>Number</label>
           <Field type="text" name="number" />
           <ErrorMessage
             className={css.ErrorMsg}
@@ -69,3 +69,4 @@ const ContactForm = ({ onAdd }) => {
 export default ContactForm;
 
 // id={numberFieldId}id={nameFieldId}
+//  htmlFor={nameFieldId} htmlFor={numberFieldId}
