@@ -20,9 +20,6 @@ const initialValues = {
 };
 
 const ContactForm = ({ onAdd }) => {
-  // const nameFieldId = useId();
-  // const numberFieldId = useId();
-
   const handleSubmit = (values, actions) => {
     onAdd({
       id: nanoid(),
@@ -31,19 +28,6 @@ const ContactForm = ({ onAdd }) => {
     });
     actions.resetForm();
   };
-
-  // const handleSubmit = (values, actions) => {
-  //   addNewContact({
-  //     id: nanoid(),
-  //     name: values.name,
-  //     number: values.number,
-  //   });
-  //   actions.resetForm();
-  // };
-  // const handleSubmit = (values, actions) => {
-  //   onAdd({ id: nanoid(), ...values });
-  //   actions.resetForm();
-  // };
 
   return (
     <Formik
